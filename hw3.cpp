@@ -57,4 +57,10 @@ int main()
     // Print the sum and product of the list
     cout << "Sum of list: " << compute_sum(list) << endl;
     cout << "Product of list: " << compute_prod(list) << endl;
+
+    // Print the reversed list
+    cout << "Reversed list:" << endl;
+    vector<float> rev = reverse(list);
+    for (int i = 0; i < rev.size(); i++)    {cout << rev[i] << ' ';}
+    cout <<endl;
 }
