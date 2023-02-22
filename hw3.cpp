@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
@@ -21,6 +22,23 @@ float compute_prod(vector<float> list)
     return prod;
 }
 
+vector<float> reverse(vector<float> list)
+{
+    vector<float> rev;
+    stack<float> temp;
+
+    for (int i = 0; i < list.size(); i++)   {temp.push(list[i]);}   // Add elements of list to a stack
+
+    // Add elements of stack to new list
+    for (int i = 0; i < list.size(); i++)
+    {
+        rev.push_back(temp.top());
+        temp.pop();
+    }
+
+    return rev;
+}
+
 int main()
 {
     cout << "Enter numbers (q to quit):" << endl;
@@ -36,6 +54,7 @@ int main()
         cin >> input;
     }
 
+    // Print the sum and product of the list
     cout << "Sum of list: " << compute_sum(list) << endl;
     cout << "Product of list: " << compute_prod(list) << endl;
 }
