@@ -20,3 +20,22 @@ float compute_prod(vector<float> list)
 
     return prod;
 }
+
+int main()
+{
+    cout << "Enter numbers (q to quit):" << endl;
+    vector<float> list;
+    string input;
+    cin >> input;
+
+    // Loop for input until input is q
+    while (input != "q")
+    {
+        float num = stof(input);    // Convert string to floating-point
+        list.push_back(num);
+        cin >> input;
+    }
+
+    cout << "Sum of list: " << compute_sum(list) << endl;
+    cout << "Product of list: " << compute_prod(list) << endl;
+}
