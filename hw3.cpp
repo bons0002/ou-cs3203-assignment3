@@ -41,13 +41,13 @@ vector<float> reverse(vector<float> list)
 
 int main()
 {
-    cout << "Enter numbers (q to quit):" << endl;
+    cout << "Enter numbers (e to exit):" << endl;   // Changed the exit character for this commit
     vector<float> list;
     string input;
     cin >> input;
 
     // Loop for input until input is q
-    while (input != "q")
+    while (input != "e")
     {
         float num = stof(input);    // Convert string to floating-point
         list.push_back(num);
